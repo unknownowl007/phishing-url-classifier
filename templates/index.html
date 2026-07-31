@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing URL Classifier</title>
+    <!-- LINK TO EXTERNAL CSS -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <a href="/" class="nav-logo">🛡️ URL Detector</a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- SCANNER CONTAINER -->
+    <div class="container">
+        <div class="header">
+            <h1>Phishing URL Classifier</h1>
+            <p>Analyze link safety with real-time backend verification</p>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="urlInput" placeholder="https://example.com/login" autocomplete="off">
+            <button id="scanBtn">Scan URL</button>
+        </div>
+
+        <p id="loader" class="loader">Scanning URL structure...</p>
+
+        <!-- RESULTS CARD -->
+        <div id="resultBox" class="result-card">
+            <div class="detail-row">
+                <span>Verdict:</span>
+                <span id="resVerdict">-</span>
+            </div>
+            <div class="detail-row">
+                <span>Target URL:</span>
+                <span id="resTarget">-</span>
+            </div>
+            <div class="detail-row">
+                <span>Risk Score:</span>
+                <span id="resRisk">-</span>
+            </div>
+            <div class="detail-row">
+                <span>HTTPS Encrypted:</span>
+                <span id="resHttps">-</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- LINK TO EXTERNAL JS -->
+    <script src="/static/script.js"></script>
+</body>
+</html>
